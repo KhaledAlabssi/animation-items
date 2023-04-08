@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.three-circle-loader {
+    position: relative;;
+}
+
+
+.three-circle-loader,
+.three-circle-loader:before,
+.three-circle-loader:after {
+    color: greenyellow;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    animation: threeCircleLoader 1.8s infinite ease-in-out;
+}
+
+.three-circle-loader:before,
+.three-circle-loader:after {
+    content: '';
+    position: absolute;
+}
+
+.three-circle-loader {
+    animation-delay: -0.15s;
+}
+
+.three-circle-loader:before {
+    left: -3.5rem;
+    animation-delay: -0.30s;
+}
+
+.three-circle-loader:after {
+    left: 3.5rem;
+}
+
+@keyframes threeCircleLoader {
+
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5rem 0 -1.3rem;
+    }
+
+    40% {
+        box-shadow: 0 2.5rem 0 0;
+    }
+}
