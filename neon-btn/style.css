@@ -16,16 +16,18 @@ body {
     background-color: #333;
 }
 
-a {
+a.neon-btn {
     background-color: white;
+    text-align: center;
     height: 4em;
-    width: 6em;
+    width: 10em;
+    padding: 20px;
     /* for absolute ::before ,::after, and span */
     position: relative; 
     
 }
 
-a::before , a::after {
+a.neon-btn::before , a.neon-btn::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -34,15 +36,15 @@ a::before , a::after {
 }
 
 
-a:hover::before {
+a.neon-btn:hover::before {
     inset: -2px;
 }
-a:hover::after {
+a.neon-btn:hover::after {
     inset: -4px;
     filter: blur(10px);
 }
 
-span {
+a.neon-btn span {
     position: absolute;
     top: 0;
     left: 0;
