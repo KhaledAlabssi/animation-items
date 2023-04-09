@@ -15,13 +15,12 @@ body {
 }
 .three-circle-loader {
     position: relative;;
+    color: lightseagreen;
 }
-
 
 .three-circle-loader,
 .three-circle-loader:before,
 .three-circle-loader:after {
-    color: greenyellow;
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
@@ -31,6 +30,7 @@ body {
 .three-circle-loader:before,
 .three-circle-loader:after {
     content: '';
+    color: orange;
     position: absolute;
 }
 
@@ -48,13 +48,11 @@ body {
 }
 
 @keyframes threeCircleLoader {
-
     0%,
     80%,
     100% {
         box-shadow: 0 2.5rem 0 -1.3rem;
     }
-
     40% {
         box-shadow: 0 2.5rem 0 0;
     }
