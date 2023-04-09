@@ -10,39 +10,34 @@ body {
     display: grid;
     place-items: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
 }
 
-.loader {
+.double-loader {
     width: 100px;
     height: 100px;
     border: 10px solid #123456;
     border-left: 10px solid lightgray;
     border-radius: 50%;
-    animation: load 2s linear infinite;
+    animation: double-loaders 2s linear infinite;
     padding: 4px;
     /* display: grid;
     place-items: center; */
 }
 
-@keyframes load {
+@keyframes double-loaders {
     0% {
         transform: rotate(0deg)
     }
-
     100% {
         transform: rotate(360deg)
     }
-
 }
 
-.sub-loader {
-
+.double-loader .sub-loader {
     width: 50px;
     height: 50px;
     border: 10px solid lightgray;
     border-left: 10px solid #123456;
     border-radius: 50%;
-    animation: load 1s linear infinite reverse;
-
+    animation: double-loaders 1s linear infinite reverse;
 }
